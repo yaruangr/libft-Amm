@@ -19,7 +19,7 @@ int	ft_tolower(int c)
 	{
 		return (c + 32);
 	}
-	return (0);
+	return (c);
 }
 
 /*int	main(void)
