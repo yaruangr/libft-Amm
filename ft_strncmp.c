@@ -22,11 +22,11 @@ int ft_strncmp(char *str1, char *str2, int c)
     {
         i++;
     }
-    else if(str1[i] != str2[i])
+    else if(str1[i] != str2[i] && c != i)
     {
-        return (str1 - str2);
+        return (str1[i] - str2[i]);
     }
-    return (str1 - str2);
+    return (0);
 }
 
 /*int main(void)
