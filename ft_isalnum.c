@@ -6,7 +6,7 @@
 /*   By: yaruangr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/18 10:39:41 by yaruangr          #+#    #+#             */
-/*   Updated: 2023/02/18 12:12:16 by yaruangr         ###   ########.fr       */
+/*   Updated: 2023/02/25 13:10:19 by yaruangr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include	"libft.h"
@@ -14,15 +14,15 @@
 
 int	ft_isalnum(int c)
 {
-	if(c >= '0' && c <= '9')
+	if (c >= '0' && c <= '9')
 	{
 		return (1);
 	}
-	else if(c >= 'A' && c <= 'Z')
+	else if (c >= 'A' && c <= 'Z')
 	{
 		return (1);
 	}
-	else if(c >= 'a' && c <= 'z')
+	else if (c >= 'a' && c <= 'z')
 	{
 		return (1);
 	}

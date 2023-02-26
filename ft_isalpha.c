@@ -6,21 +6,27 @@
 /*   By: yaruangr < yaruangr@student.42bangkok.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/17 23:06:59 by yaruangr          #+#    #+#             */
-/*   Updated: 2023/02/17 23:07:21 by yaruangr         ###   ########.fr       */
+/*   Updated: 2023/02/25 13:41:30 by yaruangr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 //#include <stdio.h>
 
-int ft_isalpha(int c)
+int	ft_isalpha(int c)
 {
-    if (c >= 'a' && c <= 'z')
-        return (1);
-    else if (c >= 'A' && c <= 'Z')
-        return (1);
-    else
-        return (0);
+	if (c >= 'a' && c <= 'z')
+	{
+		return (1);
+	}
+	else if (c >= 'A' && c <= 'Z')
+	{
+		return (1);
+	}
+	else
+	{
+		return (0);
+	}
 }
 
 /*int main(void)
