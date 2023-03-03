@@ -6,35 +6,46 @@
 /*   By: yaruangr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/26 14:56:21 by yaruangr          #+#    #+#             */
-/*   Updated: 2023/03/03 16:49:57 by yaruangr         ###   ########.fr       */
+/*   Updated: 2023/02/26 16:49:57 by yaruangr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include	"libft.h"
-#include	<stdio.h>
+//#include	"libft.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
 
 int	ft_atoi(const char *str)
 {
 	int i;
+    int d;
 
 	i = 0;
+    d = 1;
 
-	while (str[i] != '\0')
-		if (str[i] >= 65 && str[i] <= 90)
+	while (str[i] == '\0')
+        str++;
+		if (str[i] >= 'a' && str[i] <= 'z')
 		{
 			i++;
 		}
-		else if (str[i] >= 97 && str[i] <= 122)
+		else if (str[i] >= 'A' && str[i] <= 'Z')
 		{
 			i++;
 		}
+        else if (str[i] >= '0' && str[i] <= '9')
+        {
+            return (str >= '0' && str <= '9');
+            i++;
+        }
 		else
-	return ();
+	return (0);
 }
 
 int	main(void)
 {
-	const char str[] = "kitkat";
+	const char str[] = " 42BKK";
 
 	printf ("%d\n", ft_atoi(str));
 	return (0);
