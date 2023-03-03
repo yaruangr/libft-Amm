@@ -19,34 +19,35 @@
 int	ft_atoi(const char *str)
 {
 	int i;
-    int d;
+	int integer;
+	int multiply;
 
 	i = 0;
-    d = 1;
+	integer = 0;
+	multiply = 1;
 
-	while (str[i] == '\0')
-        str++;
-		if (str[i] >= 'a' && str[i] <= 'z')
+	while ((str[i] >= 9 && str[i] <= 13) || str[i] == 32)
 		{
 			i++;
 		}
-		else if (str[i] >= 'A' && str[i] <= 'Z')
+        while (str[i] == '-')
 		{
+			multiply = multiply * -1;
 			i++;
 		}
-        else if (str[i] >= '0' && str[i] <= '9')
-        {
-            return (str >= '0' && str <= '9');
-            i++;
-        }
-		else
-	return (0);
+	while (str[i] >= '0' && str[i] <= '9')
+        	{
+            		integer = (integer * 10) + (str[i] - '0'); //ascii '4' = 52, '0' = 48
+           		i++;
+		}
+	return (integer * multiply);
 }
 
 int	main(void)
 {
-	const char str[] = " 42BKK";
+	const char str[] = "   -428ABC";
 
 	printf ("%d\n", ft_atoi(str));
+	printf ("%d\n", atoi(str));
 	return (0);
 }
