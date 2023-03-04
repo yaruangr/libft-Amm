@@ -10,10 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include	"libft.h"
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#include	"libft.h"
+//#include <stdio.h>
+//#include <stdlib.h>
+//#include <string.h>
 
 
 int	ft_atoi(const char *str)
@@ -48,6 +48,5 @@ int	main(void)
 	const char str[] = "   -428ABC";
 
 	printf ("%d\n", ft_atoi(str));
-	printf ("%d\n", atoi(str));
 	return (0);
 }
