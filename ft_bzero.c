@@ -3,26 +3,36 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yaruangr <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: yaruangr < yaruangr@student.42bangkok.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/26 14:34:10 by yaruangr          #+#    #+#             */
-/*   Updated: 2023/02/26 14:43:10 by yaruangr         ###   ########.fr       */
+/*   Updated: 2023/03/06 20:23:14 by yaruangr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include	"libft.h"
+//#include	<stdio.h>
+//#include	<string.h>
 
-void	ft_bzero(void *s, size_t n)
-{
-
-
-
-
+void	ft_bzero(void *s, size_t n) //bzero คือ แปลงให้ไบต์เป็น 0 ทั้งหมด
+{						//size_t มีค่าเหมือน unsigned int
+	unsigned char *str;	//unsigned char เป็นการเก็บเฉพาะค่าบวกที่เป็นตัวอักขระ สามารถรับได้ค่าได้มากกว่า char ธรรมดา (ความจุได้มากกว่า char)
+					//*str รับค่ามาจาก *s
+	str = s;
+	while (n--)		//n เป็น 5 ให้ลบลงก็จะเป็น 4, 3, 2, 1, 0
+		*str++ = 0;	//str คือ 4, 2, B, K, K
 }
 
-int	main(void)
+/*int	main(void)
 {
-
-	printf ("%
+	char s[] = "42BKK";
+	size_t i;
+	
+	i = sizeof(s); //sizeof เอามาเช็ค s ว่ามีกี่ไบต์ สามารถเช็คด้วย i ที่เราสร้างตัวแปรขึ้นมาให้นับ
+	
+	ft_bzero(s, i); //s คือตรง void *s และ i คือ size_tเพราะ i เป็นตัวนับว่ามีกี่ไบต์
+	printf ("%s\n", s); //ส่งค่า "s คือ 42BKK" ไปแปลงให้เป็น 0 ให้หมด
 	return (0);
-}
+}*/
+//ตอนแรกเป็น void อยู่แล้วอยากเปลี่ยนให้เป็นตัวแปรประเภท char ก็เลยเอา unsigned char มาใส่ และให้ *s เป็น *str
+//แล้ว str ก็เลยให้เท่ากับ s
