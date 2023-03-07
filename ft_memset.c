@@ -32,11 +32,11 @@ void    *ft_memset(void *str, int c, size_t n) //n คือ จำนวนไ�
 int main(void)
 {
     char str[] = "Good morning teacher. How are you today?";
-    size_t i;
+    size_t n;
     
-    i = 5;
+    n = 5;
     
-    ft_memset(str, c, i);    
+    ft_memset(str, c, n);    
     printf ("%s\n", str);
     return (0);
 }
