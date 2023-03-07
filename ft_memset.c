@@ -14,23 +14,27 @@
 #include    <stdio.h>
 #include    <string.h>
 
-void    *ft_memset(void *str, int c, size_t n)
+void    *ft_memset(void *str, int c, size_t n) //n คือ จำนวนไบต์ที่จะตั้งค่า
 {
-    unsigned char *s;
-    
-    s = str;
-    ft_bzero(s, n);
-    while (n--)
-        *s++ = (unsigned char) c;
-    return (str);
+    size_t i; //ตั้งมาเพื่อนับจำนวนไบต์
+
+	if (!str)
+		return (NULL);
+	i = 0;
+	while (i < n)
+	{
+		*(unsigned char*)(str + i) = (unsigned char)c;
+		i++;
+	}
+	return (str);
 }
 
 int main(void)
 {
-    char str[] = "Gogo";
+    char str[] = "Good morning teacher. How are you today?";
     size_t i;
     
-    i = sizeof(str);
+    i = 5;
     
     ft_memset(str, c, i);    
     printf ("%s\n", str);
