@@ -11,8 +11,8 @@
 /* ************************************************************************** */
 
 #include    "libft.h"
-#include    <stdio.h>
-#include    <string.h>
+//#include    <stdio.h>
+//#include    <string.h>
 
 void    *ft_memset(void *str, int c, size_t n) //n คือ จำนวนไบต์ที่จะตั้งค่า
 {
@@ -29,7 +29,7 @@ void    *ft_memset(void *str, int c, size_t n) //n คือ จำนวนไ�
 	return (str);
 }
 
-int main(void)
+/*int main(void)
 {
     char str[] = "Good morning teacher. How are you today?";
     size_t n;
@@ -40,4 +40,4 @@ int main(void)
     ft_memset(str, c, n);    
     printf ("%s\n", str);
     return (0);
-}
+}*/
