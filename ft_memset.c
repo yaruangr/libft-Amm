@@ -23,7 +23,7 @@ void    *ft_memset(void *str, int c, size_t n) //n คือ จำนวนไ�
 	i = 0;
 	while (i < n)
 	{
-		*(unsigned char*)(str + i) = (unsigned char)c;
+		*(unsigned char*)(str + i) = (unsigned char)c; //Str + i == Str[i] แต่ใช้ Str[i] ไม่ได้เพราะ strในฟังก์ชั่นนี้ไม่ใช่ตัวแปรประเภทchar
 		i++;
 	}
 	return (str);
@@ -34,7 +34,8 @@ int main(void)
     char str[] = "Good morning teacher. How are you today?";
     size_t n;
     
-    n = 5;
+    unsigned char c = 'x'
+    n = 4;
     
     ft_memset(str, c, n);    
     printf ("%s\n", str);
