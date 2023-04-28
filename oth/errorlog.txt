@@ -1,0 +1,35 @@
+ft_memmove
+Possible illegal function found.
+Found use of memmove
+   memmove(cDest1, cSrc1, 11);
+    printf("result: %s\n", cDest1);
+เหมือน ft_memcpy แ
+
+ft_memcmp
+Possible illegal function found.
+Found use of memcmp
+", memcmp(s2, s3, sizeof(s2)));
+	printf("%d\n", ft_memcmp(s2, s3, sizeof(s2)));
+	return(0);
+}
+เ�
+
+ft_atoi	
+Converting edge-case string '-9223372036854775809' into integer.
+atoi returns:		0
+ft_atoi returns:	-1
+
+
+ft_atoi	
+Converting edge-case string '9223372036854775808' into integer.
+atoi returns:		-1
+ft_atoi returns:	0
+
+
+ft_strdup
+Possible illegal function found.
+Found use of strdup
+", strdup(sd));
+}
+copy string โดยมีการจองพื้นที่ในหน่
+
